@@ -37,7 +37,6 @@ def get_weakness(types):
 
 
 def set_reply_message(effect):
-    print(effect)
     types = effect['types']
     weakness = effect['weakness']
     strength = effect['strength']
@@ -48,27 +47,27 @@ def set_reply_message(effect):
     else:
         reply_message += '[' + types[0] + ']タイプで、'
 
-    if len(weakness['double']) > 1:
+    if len(weakness['double']) > 0:
         reply_message += '\n◎2重弱点(x2.56)：'
         for double in weakness['double']:
             reply_message += '[' + double + ']'
 
-    if len(weakness['single']) > 1:
+    if len(weakness['single']) > 0:
         reply_message += '\n○弱点(x1.6)：'
         for single in weakness['single']:
             reply_message += '[' + single + ']'
 
-    if len(strength['double']) > 1:
+    if len(strength['double']) > 0:
         reply_message += '\n▲2重耐性(x0.39)：'
         for double in strength['double']:
             reply_message += '[' + double + ']'
 
-    if len(strength['single']) > 1:
+    if len(strength['single']) > 0:
         reply_message += '\n△耐性(x0.625)：'
         for single in strength['single']:
             reply_message += '[' + single + ']'
 
-    if len(strength['noEffect']) > 1:
+    if len(strength['noEffect']) > 0:
         reply_message += '\n×強耐性(x0.244)：'
         for noEffect in strength['noEffect']:
             reply_message += '[' + noEffect + ']'
