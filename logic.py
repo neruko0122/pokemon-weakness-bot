@@ -10,7 +10,7 @@ def find_pokemon(message):
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
             print(pokemon['types'])
-            print(len(pokemon)['types'])
+            print(len(pokemon['types']))
             print(get_weakness(pokemon['types']))
             return pokemon['types'][0]
     print('not found pokemon')
