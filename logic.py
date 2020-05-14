@@ -45,37 +45,32 @@ def set_reply_message(effect):
     if len(types) > 1:
         reply_message += '【' + types[0] + '】と【' + types[1] + '】タイプで、'
     else:
-        reply_message += '【' + types[0] + '】タイプで、'
+        reply_message += '【' + types[0] + '】タイプ'
 
     if len(weakness['double']) > 1:
-        reply_message += '2重弱点(x2.56)は、'
+        reply_message += '\n2重弱点(x2.56)：'
         for double in weakness['double']:
             reply_message += '【' + double + '】'
-        reply_message += 'です。'
 
     if len(weakness['single']) > 1:
-        reply_message += '弱点(x1.6)は、'
+        reply_message += '\n弱点(x1.6)：'
         for single in weakness['single']:
             reply_message += '【' + single + '】'
-        reply_message += 'です。'
 
     if len(strength['double']) > 1:
-        reply_message += '2重耐性(x0.39)は、'
+        reply_message += '\n2重耐性(x0.39)：'
         for double in strength['double']:
             reply_message += '【' + double + '】'
-        reply_message += 'です。'
 
     if len(strength['single']) > 1:
-        reply_message += '耐性(x0.625)は、'
+        reply_message += '\n耐性(x0.625)：'
         for single in strength['single']:
             reply_message += '【' + single + '】'
-        reply_message += 'です。'
 
     if len(strength['noEffect']) > 1:
-        reply_message += '強耐性(x0.244)は、'
+        reply_message += '\n強耐性(x0.244)：'
         for noEffect in strength['noEffect']:
             reply_message += '【' + noEffect + '】'
-        reply_message += 'です。'
 
     return reply_message
 
