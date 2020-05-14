@@ -61,13 +61,19 @@ def set_reply_message(effect):
 
     if len(strength['double']) > 1:
         reply_message += '2重耐性(x0.39)は、'
-        for double in weakness['double']:
+        for double in strength['double']:
             reply_message += '【' + double + '】'
+        reply_message += 'です。'
+
+    if len(strength['single']) > 1:
+        reply_message += '耐性(x0.625)は、'
+        for single in strength['single']:
+            reply_message += '【' + single + '】'
         reply_message += 'です。'
 
     if len(strength['noEffect']) > 1:
         reply_message += '強耐性(x0.244)は、'
-        for noEffect in weakness['noEffect']:
+        for noEffect in strength['noEffect']:
             reply_message += '【' + noEffect + '】'
         reply_message += 'です。'
 
