@@ -20,7 +20,7 @@ def find_pokemon(message):
 def get_weakness(types):
     if len(types) >= 2:
         for weakness in weakness_list:
-            if len(weakness['types'] < 2):
+            if len(weakness['types']) < 2:
                 continue
             else:
                 if (types[0] == weakness['types'][0] and types[1] == weakness['types'][1]) or (types[0] == weakness['types'][1] and types[1] == weakness['types'][0]):
@@ -28,7 +28,7 @@ def get_weakness(types):
             continue
     else:
         for weakness in weakness_list:
-            if len(weakness['types'] > 1):
+            if len(weakness['types']) > 1:
                 continue
             else:
                 if types[0] == weakness['types'][0]:
