@@ -450,7 +450,7 @@
   },
   {
     "no": 19,
-    "name": "コラッタ",
+    "name": "アローラコラッタ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [20],
@@ -486,7 +486,7 @@
   },
   {
     "no": 20,
-    "name": "ラッタ",
+    "name": "アローララッタ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -612,7 +612,7 @@
   },
   {
     "no": 26,
-    "name": "ライチュウ",
+    "name": "アローラライチュウ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -648,7 +648,7 @@
   },
   {
     "no": 27,
-    "name": "サンド",
+    "name": "アローラサンド",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [28],
@@ -684,7 +684,7 @@
   },
   {
     "no": 28,
-    "name": "サンドパン",
+    "name": "アローラサンドパン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -864,7 +864,7 @@
   },
   {
     "no": 37,
-    "name": "ロコン",
+    "name": "アローラロコン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [38],
@@ -900,7 +900,7 @@
   },
   {
     "no": 38,
-    "name": "キュウコン",
+    "name": "アローラキュウコン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -1134,7 +1134,7 @@
   },
   {
     "no": 50,
-    "name": "ディグダ",
+    "name": "アローラディグダ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [51],
@@ -1170,7 +1170,7 @@
   },
   {
     "no": 51,
-    "name": "ダグトリオ",
+    "name": "アローラダグトリオ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -1206,7 +1206,7 @@
   },
   {
     "no": 52,
-    "name": "ニャース",
+    "name": "アローラニャース",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [53],
@@ -1242,7 +1242,7 @@
   },
   {
     "no": 53,
-    "name": "ペルシアン",
+    "name": "アローラペルシアン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -1656,7 +1656,7 @@
   },
   {
     "no": 74,
-    "name": "イシツブテ",
+    "name": "アローライシツブテ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [75],
@@ -1692,7 +1692,7 @@
   },
   {
     "no": 75,
-    "name": "ゴローン",
+    "name": "アローラゴローン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [76],
@@ -1728,7 +1728,7 @@
   },
   {
     "no": 76,
-    "name": "ゴローニャ",
+    "name": "アローラゴローニャ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -1980,7 +1980,7 @@
   },
   {
     "no": 88,
-    "name": "ベトベター",
+    "name": "アローラベトベター",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [89],
@@ -2016,7 +2016,7 @@
   },
   {
     "no": 89,
-    "name": "ベトベトン",
+    "name": "アローラベトベトン",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -2304,7 +2304,7 @@
   },
   {
     "no": 103,
-    "name": "ナッシー",
+    "name": "アローラナッシー",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
@@ -2358,7 +2358,7 @@
   },
   {
     "no": 105,
-    "name": "ガラガラ",
+    "name": "アローラガラガラ",
     "form": "アローラのすがた",
     "isMegaEvolution": false,
     "evolutions": [],
