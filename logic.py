@@ -37,6 +37,7 @@ def get_weakness(types):
 
 
 def set_reply_message(effect):
+    print(effect)
     types = effect['types']
     weakness = effect['weakness']
     strength = effect['strength']
