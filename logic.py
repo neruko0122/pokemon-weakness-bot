@@ -8,6 +8,6 @@ def find_pokemon(message):
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
             print(pokemon)
-            return pokemon['types']
+            return pokemon['types'][0]
     print('not found pokemon')
     return 'ポケモンの名前を正しく指定して下さい。'
