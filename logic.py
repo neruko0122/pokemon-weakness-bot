@@ -45,7 +45,7 @@ def set_reply_message(effect):
     if len(types) > 1:
         reply_message += '[' + types[0] + '/' + types[1] + ']タイプで、'
     else:
-        reply_message += '[' + types[0] + ']タイプ'
+        reply_message += '[' + types[0] + ']タイプで、'
 
     if len(weakness['double']) > 1:
         reply_message += '\n◎2重弱点(x2.56)：'
