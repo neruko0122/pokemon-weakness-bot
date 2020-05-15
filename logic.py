@@ -9,20 +9,16 @@ weakness_list = constants.WEAKNESS_LIST
 def find_pokemon(message):
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
-            print(pokemon['types'])
-            print(len(pokemon['types']))
-            print(set_reply_message(get_weakness(pokemon['types'])))
+            print(message)
             return set_reply_message(get_weakness(pokemon['types']))
     print('not found pokemon')
     return constants.POKEMON_NOT_FOUND_MESSAGE
 
 
 def find_suggest(message):
-    print('start find_suggest')
     suggest_list = []
     for pokemon in pokemon_data:
         if message in pokemon['name']:
-            print(pokemon['name'])
             suggest_list.append(pokemon['name'])
     return suggest_list
 
@@ -84,3 +80,5 @@ def set_reply_message(effect):
 
     return reply_message
 
+
+def get_quick_reply(suggest_list):

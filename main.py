@@ -8,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage, TextSendMessage, QuickReply, QuickReplyButton, MessageAction
 )
 import logic
 import constants
@@ -51,6 +51,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=result))
+        return
     else:
         suggest_list = logic.find_suggest(event.message.text)
         print(suggest_list)
@@ -58,18 +59,26 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=result))
+            return
         if len(suggest_list) > 10:
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text='該当件数が多すぎます。'))
+            return
         if len(suggest_list) == 1:
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text='1件該当しました。'))
+                TextSendMessage(text='1件該当しました。',
+                                quick_reply=QuickReply(items=[
+                                    QuickReplyButton(action=MessageAction(label="label", text="text"))
+                                ]))
+            )
+            return
         if len(suggest_list) > 1:
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text='候補から選択して下さい。'))
+            return
 
 # text_message = TextSendMessage(text='Hello, world',
 #                                quick_reply=QuickReply(items=[
