@@ -7,9 +7,14 @@ from linebot.models import (
 
 pokemon_data = file_import.import_pokemon_data()
 weakness_list = constants.WEAKNESS_LIST
+types = constants.TYPES
 
 
 def find_pokemon(message):
+    for target in types:
+        if target == message:
+            return set_reply_message(get_weakness(target))
+
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
             print(message)
