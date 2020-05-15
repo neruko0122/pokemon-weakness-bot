@@ -1,5 +1,8 @@
 import file_import
 import constants
+from linebot.models import (
+    QuickReplyButton, MessageAction
+)
 
 
 pokemon_data = file_import.import_pokemon_data()
@@ -81,4 +84,8 @@ def set_reply_message(effect):
     return reply_message
 
 
-# def get_quick_reply(suggest_list):
+def get_quick_reply(suggest_list):
+    quick_reply_list = []
+    for suggest in suggest_list:
+        quick_reply_list.append(QuickReplyButton(action=MessageAction(label=suggest, text=suggest)))
+    return quick_reply_list

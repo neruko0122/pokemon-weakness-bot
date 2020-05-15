@@ -70,22 +70,21 @@ def handle_message(event):
                 event.reply_token,
                 TextSendMessage(text='1件該当しました。',
                                 quick_reply=QuickReply(items=[
-                                    QuickReplyButton(action=MessageAction(label="label", text="text"))
+                                    QuickReplyButton(action=MessageAction(label=suggest_list[0], text=suggest_list[0]))
                                 ]))
             )
             return
         if len(suggest_list) > 1:
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text='候補から選択して下さい。'))
+                TextSendMessage(text='候補から選択して下さい。',
+                                quick_reply=QuickReply(items=[
+                                    logic.get_quick_reply(suggest_list)
+                                ]))
+            )
             return
 
-# text_message = TextSendMessage(text='Hello, world',
-#                                quick_reply=QuickReply(items=[
-#                                    QuickReplyButton(action=MessageAction(label="label", text="text"))
-#                                ]))
 
 if __name__ == "__main__":
-#    app.run()
     port = int(os.getenv("PORT"))
     app.run(host="0.0.0.0", port=port)
