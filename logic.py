@@ -12,7 +12,7 @@ types = constants.TYPES
 
 def find_pokemon(message):
     for target in types:
-        if target == message:
+        if target[0] == message:
             return set_reply_message(get_weakness(target))
 
     for pokemon in pokemon_data:
