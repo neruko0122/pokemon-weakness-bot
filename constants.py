@@ -2200,3 +2200,5 @@ WEAKNESS_LIST = [
     'skills': []
   }
 ]
+
+POKEMON_NOT_FOUND_MESSAGE = 'ポケモンの名前を正しく指定して下さい。'
