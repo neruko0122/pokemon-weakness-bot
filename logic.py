@@ -18,6 +18,7 @@ def find_pokemon(message):
 
 
 def find_suggest(message):
+    print('start find_suggest')
     suggest_list = []
     for pokemon in pokemon_data:
         if pokemon['name'] in message:

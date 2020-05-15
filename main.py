@@ -46,12 +46,14 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     result = logic.find_pokemon(event.message.text)
+    print(result)
     if result != constants.POKEMON_NOT_FOUND_MESSAGE:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=result))
     else:
         suggest_list = logic.find_suggest(event.message.text)
+        print(suggest_list)
         if len(suggest_list) == 0:
             line_bot_api.reply_message(
                 event.reply_token,
