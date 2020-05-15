@@ -78,9 +78,8 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text='候補から選択して下さい。',
-                                quick_reply=QuickReply(items=[
-                                    logic.get_quick_reply(suggest_list)
-                                ]))
+                                quick_reply=QuickReply(items=logic.get_quick_reply(suggest_list)
+                                ))
             )
             return
 

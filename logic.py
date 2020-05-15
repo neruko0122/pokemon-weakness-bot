@@ -89,5 +89,4 @@ def get_quick_reply(suggest_list):
     for suggest in suggest_list:
         print(suggest)
         quick_reply_list.append(QuickReplyButton(action=MessageAction(label=suggest, text=suggest)))
-    print(quick_reply_list)
     return quick_reply_list
