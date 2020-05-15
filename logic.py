@@ -81,4 +81,4 @@ def set_reply_message(effect):
     return reply_message
 
 
-def get_quick_reply(suggest_list):
+# def get_quick_reply(suggest_list):
