@@ -11,16 +11,12 @@ types = constants.TYPES
 
 
 def find_pokemon(message):
-    print(message)
     for target in types:
-        print(target)
         if target[0] == message:
-            print(target[0])
             return set_reply_message(get_weakness(target))
 
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
-            print(message)
             return set_reply_message(get_weakness(pokemon['types']))
     print('not found pokemon')
     return constants.POKEMON_NOT_FOUND_MESSAGE
