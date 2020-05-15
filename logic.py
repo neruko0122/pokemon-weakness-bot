@@ -21,7 +21,7 @@ def find_suggest(message):
     print('start find_suggest')
     suggest_list = []
     for pokemon in pokemon_data:
-        if pokemon['name'] in message:
+        if message in pokemon['name']:
             print(pokemon['name'])
             suggest_list.append(pokemon['name'])
     return suggest_list
