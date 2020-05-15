@@ -1,5 +1,8 @@
 import file_import
 import constants
+from linebot.models import (
+    QuickReplyButton, MessageAction
+)
 
 
 pokemon_data = file_import.import_pokemon_data()
@@ -9,12 +12,18 @@ weakness_list = constants.WEAKNESS_LIST
 def find_pokemon(message):
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
-            print(pokemon['types'])
-            print(len(pokemon['types']))
-            print(set_reply_message(get_weakness(pokemon['types'])))
+            print(message)
             return set_reply_message(get_weakness(pokemon['types']))
     print('not found pokemon')
-    return 'ポケモンの名前を正しく指定して下さい。'
+    return constants.POKEMON_NOT_FOUND_MESSAGE
+
+
+def find_suggest(message):
+    suggest_list = []
+    for pokemon in pokemon_data:
+        if message in pokemon['name']:
+            suggest_list.append(pokemon['name'])
+    return suggest_list
 
 
 def get_weakness(types):
@@ -74,3 +83,9 @@ def set_reply_message(effect):
 
     return reply_message
 
+
+def get_quick_reply(suggest_list):
+    quick_reply_list = []
+    for suggest in suggest_list:
+        quick_reply_list.append(QuickReplyButton(action=MessageAction(label=suggest, text=suggest)))
+    return quick_reply_list
