@@ -14,7 +14,16 @@ def find_pokemon(message):
             print(set_reply_message(get_weakness(pokemon['types'])))
             return set_reply_message(get_weakness(pokemon['types']))
     print('not found pokemon')
-    return 'ポケモンの名前を正しく指定して下さい。'
+    return constants.POKEMON_NOT_FOUND_MESSAGE
+
+
+def find_suggest(message):
+    suggest_list = []
+    for pokemon in pokemon_data:
+        if pokemon['name'] in message:
+            print(pokemon['name'])
+            suggest_list.append(pokemon['name'])
+    return suggest_list
 
 
 def get_weakness(types):

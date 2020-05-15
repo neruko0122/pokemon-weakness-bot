@@ -11,6 +11,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 import logic
+import constants
 
 app = Flask(__name__)
 
@@ -44,9 +45,34 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=logic.find_pokemon(event.message.text)))
+    result = logic.find_pokemon(event.message.text)
+    if result != constants.POKEMON_NOT_FOUND_MESSAGE:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=result))
+    else:
+        suggest_list = logic.find_suggest(event.message.text)
+        if len(suggest_list) == 0:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=result))
+        if len(suggest_list) > 10:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text='該当件数が多すぎます。'))
+        if len(suggest_list) == 1:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text='1件該当しました。'))
+        if len(suggest_list) > 1:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text='候補から選択して下さい。'))
+
+# text_message = TextSendMessage(text='Hello, world',
+#                                quick_reply=QuickReply(items=[
+#                                    QuickReplyButton(action=MessageAction(label="label", text="text"))
+#                                ]))
 
 if __name__ == "__main__":
 #    app.run()
