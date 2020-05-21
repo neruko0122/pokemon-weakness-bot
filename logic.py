@@ -8,13 +8,20 @@ from linebot.models import (
 pokemon_data = file_import.import_pokemon_data()
 weakness_list = constants.WEAKNESS_LIST
 types = constants.TYPES
+normal_skills = constants.NORMAL_SKILLS
+special_skills = constants.SPECIAL_SKILLS
 
 
 def find_pokemon(message):
     for target in types:
         if target[0] == message:
             return set_reply_message(get_weakness(target))
-
+    for normal in normal_skills:
+        if normal['name'] == message:
+            return set_reply_skill_message(normal)
+    for special in special_skills:
+        if special['name'] == message:
+            return set_reply_skill_message(special)
     for pokemon in pokemon_data:
         if pokemon['name'] == message:
             return set_reply_message(get_weakness(pokemon['types']))
@@ -84,6 +91,25 @@ def set_reply_message(effect):
         reply_message += '\n×強耐性(x0.244)：'
         for noEffect in strength['noEffect']:
             reply_message += '[' + noEffect + ']'
+
+    return reply_message
+
+
+def set_reply_skill_message(skill):
+    name = skill['name']
+    category = skill['category']
+    reply_message = ''
+
+    if category == 'ノーマル':
+        reply_message += '【' + name + '】のタイプは「' + skill['type'] + '」で、'
+        reply_message += '1ターンあたりのダメージ量は' + skill['dpt'] + '、'
+        reply_message += '1ターンにためられるエネルギー量は' + skill['ept'] + 'です'
+    else:
+        reply_message += '【' + name + '】タイプは「' + skill['type'] + '」で、'
+        reply_message += '1エネルギーあたりのダメージ量は' + skill['dpe'] + '、'
+        reply_message += '消費エネルギー量は' + skill['energy'] + 'です'
+        if skill['effect']:
+            reply_message += '特殊効果は' + skill['effect'] + 'です'
 
     return reply_message
 
