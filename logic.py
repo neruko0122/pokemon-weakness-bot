@@ -101,15 +101,15 @@ def set_reply_skill_message(skill):
     reply_message = ''
 
     if category == 'ノーマル':
-        reply_message += '【' + name + '】のタイプは「' + skill['type'] + '」で、'
+        reply_message += '【' + name + '】は「' + skill['type'] + '」タイプで、'
         reply_message += '1ターンあたりのダメージ量は' + skill['dpt'] + '、'
         reply_message += '1ターンにためられるエネルギー量は' + skill['ept'] + 'です'
     else:
-        reply_message += '【' + name + '】タイプは「' + skill['type'] + '」で、'
+        reply_message += '【' + name + '】は「' + skill['type'] + '」タイプで、'
         reply_message += '1エネルギーあたりのダメージ量は' + skill['dpe'] + '、'
         reply_message += '消費エネルギー量は' + skill['energy'] + 'です'
-        if skill['effect']:
-            reply_message += '特殊効果は' + skill['effect'] + 'です'
+        if skill['effect'] != '-':
+            reply_message += 'また、特殊効果は' + skill['effect'] + 'です'
 
     return reply_message
 
