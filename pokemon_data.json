@@ -16510,8 +16510,12 @@
     "form": "",
     "isMegaEvolution": false,
     "evolutions": [],
-    "types": ["でんき"],
-    "abilities": ["ちくでん"],
+    "types": [
+      "でんき"
+    ],
+    "abilities": [
+      "ちくでん"
+    ],
     "hiddenAbilities": [],
     "status": {
       "hp": 88,
@@ -16520,6 +16524,204 @@
       "spAttack": 102,
       "spDefence": 80,
       "speed": 143
+    }
+  },
+    {
+    "no": 808,
+    "name": "メルタン",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [809],
+    "types": ["はがね"],
+    "abilities": ["じりょく"],
+    "hiddenAbilities": [],
+    "status": {
+      "hp": 46,
+      "attack": 65,
+      "defence": 65,
+      "spAttack": 55,
+      "spDefence": 35,
+      "speed": 34
+    }
+  },
+    {
+    "no": 809,
+    "name": "メルメタル",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["はがね"],
+    "abilities": ["てつのこぶし"],
+    "hiddenAbilities": [],
+    "status": {
+      "hp": 135,
+      "attack": 143,
+      "defence": 143,
+      "spAttack": 80,
+      "spDefence": 65,
+      "speed": 34
+    }
+  },
+    {
+    "no": 810,
+    "name": "サルノリ",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [811],
+    "types": ["くさ"],
+    "abilities": ["しんりょく"],
+    "hiddenAbilities": ["グラスメイカー"],
+    "status": {
+      "hp": 50,
+      "attack": 65,
+      "defence": 50,
+      "spAttack": 40,
+      "spDefence": 40,
+      "speed": 65
+    }
+  },
+    {
+    "no": 811,
+    "name": "バチンキー",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [812],
+    "types": ["くさ"],
+    "abilities": ["しんりょく"],
+    "hiddenAbilities": ["グラスメイカー"],
+    "status": {
+      "hp": 70,
+      "attack": 85,
+      "defence": 70,
+      "spAttack": 55,
+      "spDefence": 60,
+      "speed": 80
+    }
+  },
+    {
+    "no": 812,
+    "name": "ゴリランダー",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["くさ"],
+    "abilities": ["しんりょく"],
+    "hiddenAbilities": ["グラスメイカー"],
+    "status": {
+      "hp": 100,
+      "attack": 125,
+      "defence": 90,
+      "spAttack": 60,
+      "spDefence": 70,
+      "speed": 85
+    }
+  },
+    {
+    "no": 813,
+    "name": "ヒバニー",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [814],
+    "types": ["ほのお"],
+    "abilities": ["もうか"],
+    "hiddenAbilities": ["リベロ"],
+    "status": {
+      "hp": 50,
+      "attack": 71,
+      "defence": 40,
+      "spAttack": 40,
+      "spDefence": 40,
+      "speed": 69
+    }
+  },
+    {
+    "no": 814,
+    "name": "ラビフット",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [815],
+    "types": ["ほのお"],
+    "abilities": ["もうか"],
+    "hiddenAbilities": ["リベロ"],
+    "status": {
+      "hp": 65,
+      "attack": 86,
+      "defence": 60,
+      "spAttack": 55,
+      "spDefence": 60,
+      "speed": 94
+    }
+  },
+    {
+    "no": 815,
+    "name": "エースバーン",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["ほのお"],
+    "abilities": ["もうか"],
+    "hiddenAbilities": ["リベロ"],
+    "status": {
+      "hp": 80,
+      "attack": 116,
+      "defence": 75,
+      "spAttack": 65,
+      "spDefence": 75,
+      "speed": 119
+    }
+  },
+    {
+    "no": 816,
+    "name": "メッソン",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [817],
+    "types": ["みず"],
+    "abilities": ["げきりゅう"],
+    "hiddenAbilities": ["スナイパー"],
+    "status": {
+      "hp": 50,
+      "attack": 40,
+      "defence": 40,
+      "spAttack": 70,
+      "spDefence": 40,
+      "speed": 70
+    }
+  },
+    {
+    "no": 817,
+    "name": "ジメレオン",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [818],
+    "types": ["みず"],
+    "abilities": ["げきりゅう"],
+    "hiddenAbilities": ["スナイパー"],
+    "status": {
+      "hp": 65,
+      "attack": 60,
+      "defence": 55,
+      "spAttack": 95,
+      "spDefence": 55,
+      "speed": 90
+    }
+  },
+    {
+    "no": 818,
+    "name": "インテレオン",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["みず"],
+    "abilities": ["げきりゅう"],
+    "hiddenAbilities": ["スナイパー"],
+    "status": {
+      "hp": 70,
+      "attack": 85,
+      "defence": 65,
+      "spAttack": 125,
+      "spDefence": 65,
+      "speed": 120
     }
   }
 ]
