@@ -16723,5 +16723,41 @@
       "spDefence": 65,
       "speed": 120
     }
+  },
+    {
+    "no": 820,
+    "name": "ホシガリス",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["ノーマル"],
+    "abilities": ["ほおぶくろ"],
+    "hiddenAbilities": ["くいしんぼう"],
+    "status": {
+      "hp": 70,
+      "attack": 55,
+      "defence": 55,
+      "spAttack": 35,
+      "spDefence": 35,
+      "speed": 25
+    }
+  },
+    {
+    "no": 821,
+    "name": "ヨクバリス",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [],
+    "types": ["ノーマル"],
+    "abilities": ["ほおぶくろ"],
+    "hiddenAbilities": ["くいしんぼう"],
+    "status": {
+      "hp": 120,
+      "attack": 95,
+      "defence": 95,
+      "spAttack": 55,
+      "spDefence": 75,
+      "speed": 20
+    }
   }
 ]
